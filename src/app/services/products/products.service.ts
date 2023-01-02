@@ -13,6 +13,11 @@ export class ProductsService {
     return PRODUCTS;
   }
 
+  getProductsByCategoryId(categoryId: number) : Product[] | undefined {
+    const products = PRODUCTS.filter(product => product.categoryId === categoryId);
+    return products;
+  }
+
   // Retourne un seul produit dont l'id correspont à l'id recherché
   getProductById(id: number) : Product | undefined {
     const product = PRODUCTS.find(product => product.id === id);

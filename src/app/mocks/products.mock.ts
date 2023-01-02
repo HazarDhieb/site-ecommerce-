@@ -9,6 +9,8 @@ export interface Product {
     description: string;
     entretien : string;
     isAvailable: boolean;
+    isVisible: boolean;
+    categoryId: number;
 }
 export const PRODUCTS: Product [] = [
     {
@@ -22,17 +24,7 @@ export const PRODUCTS: Product [] = [
         description: "Sari indien bleu et rose",
         entretien : "laver au pressing",
         isAvailable: true,
-    },
-    {
-        id: 2,
-        name: "Jeogori",
-        image: "",
-        origin: "Chine",
-        color: "blue",
-        size: "2m",
-        price: 124.90,
-        description: "Sari indien bleu et rose",
-        entretien : "laver au pressing",
-        isAvailable: true,
+        isVisible: true,
+        categoryId: 3
     }
 ];
