@@ -1,1 +1,366 @@
 /* You can add global styles to this file, and also import other style files */
+/* ------ CSS Global ------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    /* Les images vont toujours faire la taille importé, si elle ne peuvent plus, elles s'adaptent à la fenêtre*/
+    display: block;
+    /* car images hybrides entre block et inline*/
+}
+
+:root {
+    /* variables*/
+    --color-red: #882404;
+    --color-white: #FFFFFF;
+    --color-light_grey: #EEEEEE;
+    --color-extra_light_grey: #F5F5F5;
+    --color-dark_grey: #232323;
+    --color-beige: #D7C4AB;
+}
+
+body {
+    background-color: var(--color-white);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+/* on met des borders aux boites qu'on efface ensuite pour voir où se placent les sections */
+
+/* div, section, main, header, nav {
+    border : 1px solid black;
+} */
+
+.flex {
+    /* clesse globale pour metrre en flex, à ajouter dans le html*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.column {
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: var(--color-red);
+}
+
+button {
+    border: none;
+    background-color: var(--color-white);
+    cursor: pointer;
+}
+
+/* ----- FONTS ------- */
+h1{
+    font-size: clamp(28px,3vw,40px);
+}
+
+h2{
+    font-size: clamp(22px,3vw,30px);
+}
+h3{
+    font-size: clamp(15px,3vw,18px);
+}
+
+p{
+    font-size: clamp(13px,3vw,15px);
+    line-height: 22px;
+}
+
+
+/* HEADER */
+
+header {
+    width: min(1400px, 100%);
+    margin: 0px auto 0px;
+    /* le auto le centre */
+}
+
+nav a {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: clamp(13px,3vw,17px);
+}
+
+nav a:hover {
+    color: var(--color-red);
+}
+
+/* MAIN  */
+
+main {
+    width: min(1195px, 90%);
+    margin: 50px auto 100px;
+    /* le auto le centre */
+}
+
+/* HEADER 1 */
+#header-one {
+    /* background-color: white; */
+    width: 95%;
+    /* position: sticky;
+    top: 0; */
+}
+
+.navbar-mobile {
+    display: none;
+}
+
+.search-bar {
+    align-self: flex-end;
+    gap: 8px;
+}
+
+.search-bar form{
+    gap: 100px;
+}
+
+.search-bar::placeholder {
+    color: #504F4F;
+    font-size: clamp(12px, 3vw, 14px);
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.search-bar input{
+    border: none;
+    outline: none;
+    color: #504F4F;
+    font-size: clamp(12px, 3vw, 14px);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.search-bar .fa-magnifying-glass{
+    cursor: pointer;
+}
+.header-icons {
+    align-self: flex-end;
+    font-size: x-large;
+    color: var(--color-dark_grey);
+    gap: 20px;
+}
+
+
+
+.hr-one, .hr-two {
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.hr-two {
+    height: 10px;
+    border: 0;
+    box-shadow: 0 10px 10px -10px #8c8c8c inset;}
+
+/* -------HEADER 2----------- */
+
+#header-two {
+    justify-content: center;
+    gap: 100px;
+}
+
+/* --------- PRE-FOOTER / GARANTIES --------- */
+#pre-footer{
+    background: var(--color-light_grey);
+    padding: 50px;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.garanty-box {
+    width: min(300px, 100%);
+    text-align: center;
+    gap: 15px;
+    color: var(--color-dark_grey);
+}
+
+.garanty-box i{
+    font-size: xx-large;
+}
+.garanty-box h3{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* ------------ FOOTER ------------- */
+footer{
+    padding: 100px;
+    background-color: var(--color-extra_light_grey);
+    gap: 80px;
+}
+
+
+.footer-one{
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 50px;
+} 
+
+.footer-links{
+    width: min(310px,100%);
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.footer-links a{
+    text-transform: none;
+    font-size: clamp(13px,3vw,16px);
+}
+
+.newsletter{
+    width: min(550px,100%);
+    text-align: center;
+    gap: 20px;
+}
+
+.newsletter h3{
+    text-transform: uppercase;
+    font-size: clamp(18px,3vw,24px);
+}
+
+.newsletter-form{
+    width: min(350px,100%);
+    gap: 13px;
+}
+.newsletter-form input{
+    width: 100%;
+    border: 2px solid var(--color-red);
+    padding: 10px;
+}
+
+footer ::placeholder {
+    font-size: medium;
+}
+
+.submit-button{
+    background-color: var(--color-red);
+    color: white;
+    padding: 2px 6px;
+}
+
+.social-medias{
+    text-align: center;
+    gap: 40px;
+}
+.social-medias .fa-brands{
+    font-size: 50px;
+}
+
+.payment-methods{
+    width: 300px;
+}
+
+.up{
+    gap: 5px;
+}
+/*================ MEDIA QUERIES ====================== */
+@media (max-width: 1000px) {
+/* ------- FOOTER  ------ */
+
+footer{
+    padding: 30px;
+}
+}
+
+@media (max-width: 750px) {
+
+    /* HEADER */
+
+    /* en dessous et = à 750px*/
+    #header-two,
+    .search-bar,
+    .hr-two {
+        display: none;
+    }
+
+    .hr-one {
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+
+    .navbar-mobile {
+        padding: 30px 0px;
+        display: none;
+        gap: 25px;
+        background-color: var(--color-beige);
+    }
+
+
+    /* ---- Header burger menu ------ */
+    .burger {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    .burger-bar {
+        width: 30px;
+        height: 5px;
+        background: var(--color-dark_grey);
+        border-radius: 5px;
+    }
+
+    .burger-bar--top,
+    .burger-bar--bottom {
+        content: "";
+        position: absolute;
+    }
+
+    .burger-bar--top {
+        transform: translateY(-12px);
+    }
+
+    .burger-bar--bottom {
+        transform: translateY(12px);
+    }
+
+    /* ANIMATION BURGER */
+    .burger.open .burger-bar--top {
+        background: transparent;
+    }
+
+    .burger.open .burger-bar--middle {
+        transform: rotate(45deg);
+    }
+
+    .burger.open .burger-bar--bottom {
+        transform: rotate(-45deg);
+    }    
+
+        /* ---------FOOTER ------ */
+        .footer-one{
+            flex-direction: column;
+            align-items: center;
+        }
+}
+
+@media (max-width: 550px){
+    /* ------------ FOOTER ------------- */
+footer{
+    padding: 30px;
+}
+.social-medias .fa-brands{
+    font-size: 40px;
+}
+
+.payment-methods{
+    width: 250px;
+}
+}
