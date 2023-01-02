@@ -16,12 +16,12 @@ export class ProductsComponent {
     private router: Router){}
 
   ngOnInit() {
-    this.getProduct();
+    this.getProducts();
     // console.log("THIS PRODUCTS"+this.products);
   }
-  getProduct(){
+  getProducts(){
     const id = Number(this.activatedRoute.snapshot.paramMap.get('id'));
-    const foundProduct = this.productService.getProductsByCategoryId(id);
-    foundProduct ? this.products = foundProduct : this.router.navigate(['/not-found']);
+    const foundProducts = this.productService.getProductsByCategoryId(id);
+    foundProducts ? this.products = foundProducts : this.router.navigate(['/not-found']);
   }
 }
