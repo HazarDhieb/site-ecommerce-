@@ -1,0 +1,7 @@
+#pre-footer{
+    background: var(--color-light_grey);
+    padding: 50px;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}

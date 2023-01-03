@@ -1,7 +1,39 @@
-<p>header works!</p>
-<nav>
-    <a routerLink="/">Accueil</a>
-    <a routerLink="/categories">Catégories</a>
-    <a routerLink="/products">Produits</a>
-    <a href="#">A propos</a>
-</nav>
+<header>
+    <!-- HEADER 1 -->
+    <div id="header-one" class="flex">
+        <a href="./index.html"><img src="assets/images/logo_etnika.png" alt="logo_etnika"></a>
+        <div id="search-bar" class="flex column">
+            <form action="#" class="flex">
+                <input class="search-input" name="search" placeholder="Rechercher un article">
+                <button>
+                    <i class="fas fa-regular fa-magnifying-glass"></i>
+                </button>
+            </form>
+            <hr>
+        </div>
+        <div class="header-icons flex">
+            <a href="#"><i class="fas fa-light fa-user"></i></a>
+            <a href="./panier.html"><i class="fas fa-light fa-cart-shopping"></i></a>
+            <div class="burger">
+                <span class="burger-bar burger-bar--top"></span>
+                <span class="burger-bar burger-bar--middle"></span>
+                <span class="burger-bar burger-bar--bottom"></span>
+            </div>
+        </div>
+    </div>
+    <hr class="hr-one">
+    <nav class="navbar-mobile flex column">
+        <a routerLink="/">Accueil</a>
+        <a routerLink="/products/3">Boutique</a>
+        <a routerLink="/categories">Catégories</a>
+        <a href="#">A propos</a>
+    </nav>
+    <!-- HEADER 2 -->
+    <nav id="header-two" class="flex">
+        <a routerLink="/">Accueil</a>
+        <a routerLink="/products/3">Boutique</a>
+        <a routerLink="/categories">Catégories</a>
+        <a href="#">A propos</a>
+    </nav>
+    <hr class="hr-two">
+</header>

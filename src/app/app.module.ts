@@ -14,6 +14,8 @@ import { PreFooterComponent } from './components/pre-footer/pre-footer.component
 import { ProductsComponent } from './pages/products/products.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { BackButtonComponent } from './components/back-button/back-button.component';
+import { ServiceCardComponent } from './components/service-card/service-card.component';
+import { ServicesComponent } from './components/services/services.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { BackButtonComponent } from './components/back-button/back-button.compon
     PreFooterComponent,
     ProductsComponent,
     NotFoundComponent,
-    BackButtonComponent
+    BackButtonComponent,
+    ServiceCardComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,
