@@ -16,9 +16,10 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { BackButtonComponent } from './components/back-button/back-button.component';
 import { ServiceCardComponent } from './components/service-card/service-card.component';
 import { ServicesComponent } from './components/services/services.component';
-
+import { CategoryCardComponent } from './components/category-card/category-card.component';
 @NgModule({
   declarations: [
+    CategoryCardComponent,
     AppComponent,
     HomeComponent,
     CategoriesComponent,

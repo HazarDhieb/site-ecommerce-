@@ -1,0 +1,41 @@
+/******categories***/
+ img{
+    /*position: relative;*/
+   width:250px;
+    gap:20px;
+    
+}
+
+ button{
+   /* position: absolute;*/
+       background-color: var(--color-beige);
+       letter-spacing: 1px;
+    font-weight: bold;
+    /*bottom: 35px; */
+    padding: 15px 30px;
+    transform: translateY(-45px);
+
+}
+
+ button:hover{
+    background-color: var(--color-red);
+}
+.categories-contenu a:hover{
+    color: white;
+}
+
+
+    @media (max-width:600px){
+         img{
+           max-width: 100%;
+      
+        }
+         button{
+            top: 40px;
+    
+         } 
+    
+    
+    
+    }
+    
