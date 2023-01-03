@@ -14,9 +14,12 @@ import { PreFooterComponent } from './components/pre-footer/pre-footer.component
 import { ProductsComponent } from './pages/products/products.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { BackButtonComponent } from './components/back-button/back-button.component';
+import { CategoryCardComponent } from './components/category-card/category-card.component';
+
 
 @NgModule({
   declarations: [
+    CategoryCardComponent,
     AppComponent,
     HomeComponent,
     CategoriesComponent,
@@ -28,7 +31,8 @@ import { BackButtonComponent } from './components/back-button/back-button.compon
     PreFooterComponent,
     ProductsComponent,
     NotFoundComponent,
-    BackButtonComponent
+    BackButtonComponent,
+    
   ],
   imports: [
     BrowserModule,

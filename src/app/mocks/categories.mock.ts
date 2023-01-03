@@ -2,27 +2,32 @@ export interface Category {
     id: number;
     name: string;
     image: string;
+    
 }
 
 export const CATEGORIES: Category[] = [
     {
         id: 1,
         name: "Afrique",
-        image: ""
+        image: "assets/images/categories/afrique.jpg",
+        
     },
     {
         id: 2,
         name: "Amérique du sud",
-        image: ""
+        image: "assets/images/categories/south amarica.jpg",
+        
     },
     {
         id: 3,
         name: "Asie",
-        image: ""
+        image: "assets/images/categories/asie.jpg",
+        
     },
     {
         id: 4,
         name: "Europe",
-        image: ""
+        image: "assets/images/categories/Europe.jpg",
+        
     }
 ];
