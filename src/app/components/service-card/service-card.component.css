@@ -1,0 +1,16 @@
+/* --------- PRE-FOOTER / GARANTIES --------- */
+
+.garanty-box {
+    width: min(300px, 100%);
+    text-align: center;
+    gap: 15px;
+    color: var(--color-dark_grey);
+}
+
+.garanty-box i{
+    font-size: xx-large;
+}
+.garanty-box h3{
+    text-transform: uppercase;
+    font-weight: 500;
+}
