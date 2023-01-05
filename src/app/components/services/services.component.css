@@ -5,3 +5,8 @@
     gap: 60px;
     flex-wrap: wrap;
 }
+
+app-service-card{
+    max-width: 300px;
+    /* width: min(300px, 100%); */
+}
