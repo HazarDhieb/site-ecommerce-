@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +17,13 @@ import { BackButtonComponent } from './components/back-button/back-button.compon
 import { ServiceCardComponent } from './components/service-card/service-card.component';
 import { ServicesComponent } from './components/services/services.component';
 import { CategoryCardComponent } from './components/category-card/category-card.component';
+import { PaymentsComponent } from './components/payments/payments.component';
+import { GaranteesComponent } from './components/garantees/garantees.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularMaterialModuleTsModule } from './modules/angular-material.module.ts/angular-material.module.ts.module';
+import { PayementTotalComponent } from './components/payement-total/payement-total.component';
+import { BarProgressComponent } from './components/bar-progress/bar-progress.component';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     CategoryCardComponent,
@@ -33,13 +40,21 @@ import { CategoryCardComponent } from './components/category-card/category-card.
     NotFoundComponent,
     BackButtonComponent,
     ServiceCardComponent,
-    ServicesComponent
+    ServicesComponent,
+    PaymentsComponent,
+    GaranteesComponent,
+    PayementTotalComponent,
+    BarProgressComponent
   ],
   imports: [
+    ReactiveFormsModule,
+    AngularMaterialModuleTsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
