@@ -46,7 +46,7 @@ import { PaymentSuccessComponent } from './pages/payment-success/payment-success
     PaymentsComponent,
     GaranteesComponent,
     PayementTotalComponent,
-    BarProgressComponent
+    BarProgressComponent,
     ButtonComponent,
     ProductCardComponent,
     PaymentSuccessComponent
