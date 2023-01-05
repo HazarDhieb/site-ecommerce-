@@ -93,7 +93,7 @@ nav a:hover {
 
     /* en dessous et = à 750px*/
     #header-two,
-    .search-bar,
+    #search-bar,
     .hr-two {
         display: none;
     }

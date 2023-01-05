@@ -1,6 +1,5 @@
 import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -24,6 +23,9 @@ import { AngularMaterialModuleTsModule } from './modules/angular-material.module
 import { PayementTotalComponent } from './components/payement-total/payement-total.component';
 import { BarProgressComponent } from './components/bar-progress/bar-progress.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ButtonComponent } from './components/button/button.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
+import { PaymentSuccessComponent } from './pages/payment-success/payment-success.component';
 @NgModule({
   declarations: [
     CategoryCardComponent,
@@ -45,6 +47,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     GaranteesComponent,
     PayementTotalComponent,
     BarProgressComponent
+    ButtonComponent,
+    ProductCardComponent,
+    PaymentSuccessComponent
   ],
   imports: [
     ReactiveFormsModule,

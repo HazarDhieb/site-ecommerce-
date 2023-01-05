@@ -1,24 +1,32 @@
 export interface Button {
     buttonTitle: string;
+    buttonLink: string;
 }
 
 export const BUTTON: Button[] = [
+
     {
-        buttonTitle: "Ajouter au panier"
+        buttonTitle: "Ajouter au panier",
+        buttonLink: "/cart"
     },
     {
-        buttonTitle: "Voir plus"
+        buttonTitle: "Voir plus",
+        buttonLink:"/products"
     },
     {
-        buttonTitle: "Valider la commande"
+        buttonTitle: "Valider la commande",
+        buttonLink:"/payment"
     },
     {
-        buttonTitle: "Valider"
+        buttonTitle: "Valider",
+        buttonLink:"/payment-success"
     },
     {
-        buttonTitle: "Annuler"
+        buttonTitle: "Annuler",
+        buttonLink:"/cart"
     },
     {
-        buttonTitle: "Je m'inscris"
+        buttonTitle: "Je m'inscris",
+        buttonLink:"/"
     },
 ]
