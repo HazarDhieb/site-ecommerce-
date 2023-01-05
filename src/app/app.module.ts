@@ -17,6 +17,9 @@ import { BackButtonComponent } from './components/back-button/back-button.compon
 import { ServiceCardComponent } from './components/service-card/service-card.component';
 import { ServicesComponent } from './components/services/services.component';
 import { CategoryCardComponent } from './components/category-card/category-card.component';
+import { ButtonComponent } from './components/button/button.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
+import { PaymentSuccessComponent } from './pages/payment-success/payment-success.component';
 @NgModule({
   declarations: [
     CategoryCardComponent,
@@ -33,7 +36,10 @@ import { CategoryCardComponent } from './components/category-card/category-card.
     NotFoundComponent,
     BackButtonComponent,
     ServiceCardComponent,
-    ServicesComponent
+    ServicesComponent,
+    ButtonComponent,
+    ProductCardComponent,
+    PaymentSuccessComponent
   ],
   imports: [
     BrowserModule,

@@ -68,7 +68,7 @@ export const PRODUCTS: Product [] = [
     {
         id: 4,
         name: "Jeogori",
-        image: "assets/images/asian_products/koria-jeogori.png",
+        image: "assets/images/asian_products/korian-jeogori.png",
         origin: "Coréé",
         colors: [{colorName:"Rouge", colorCode:"#ff0000"},{colorName:"bleu", colorCode:"#0000ff"},{colorName:"jaune", colorCode:"#ffff00"}],
         size: "2m",
@@ -112,7 +112,7 @@ export const PRODUCTS: Product [] = [
     {
         id: 7,
         name: "Folk Attire",
-        image: "assets/images/asian_products/india-Attire.png",
+        image: "assets/images/asian_products/idian-Attire.png",
         origin: "Inde",
         colors:[{colorName:"Rouge", colorCode:"#ff0000"},{colorName:"Or", colorCode:"#ffd700"},{colorName:"Rouge", colorCode:"#ff0000"}],
         size: "3m",
@@ -187,7 +187,7 @@ export const PRODUCTS: Product [] = [
     {
         id: 12,
         name: "Folk Noir",
-        image: "assets/images/asian_products/mangole-1.png",
+        image: "assets/images/asian_products/mangole-1 1.png",
         origin: "Mangolie",
         colors:[{colorName:"Rouge", colorCode:"#ff0000"},{colorName:"Or", colorCode:"#ffd700"},{colorName:"Rouge", colorCode:"#ff0000"}],
         size: "2m",

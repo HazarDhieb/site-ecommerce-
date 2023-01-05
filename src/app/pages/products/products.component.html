@@ -1,8 +1,10 @@
-<app-back-button></app-back-button>
-<div *ngFor="let item of products">
+<!-- <app-back-button></app-back-button>
+<div *ngFor="let product of products">
     <article>
         <h3> {{item.name}} </h3>
         <p> {{ item.price}} </p>
         <a routerLink="/products/{{item.id}}">Voir le produit</a>
-    </article>
-</div>
+    </article> -->
+    <section id="products" class="flex">  
+        <app-product-card *ngFor="let product of products" [product]="product"></app-product-card>
+    </section>
