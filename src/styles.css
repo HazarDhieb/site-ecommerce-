@@ -88,3 +88,110 @@ main {
     /* le auto le centre */
 }
 
+
+/* ------------ FOOTER ------------- */
+footer{
+    padding: 100px;
+    background-color: var(--color-extra_light_grey);
+    gap: 80px;
+}
+
+
+.footer-one{
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 50px;
+} 
+
+.footer-links{
+    width: min(310px,100%);
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.footer-links a{
+    text-transform: none;
+    font-size: clamp(13px,3vw,16px);
+}
+
+.newsletter{
+    width: min(550px,100%);
+    text-align: center;
+    gap: 20px;
+}
+
+.newsletter h3{
+    text-transform: uppercase;
+    font-size: clamp(18px,3vw,24px);
+}
+
+.newsletter-form{
+    width: min(350px,100%);
+    gap: 13px;
+}
+.newsletter-form input{
+    width: 100%;
+    border: 2px solid var(--color-red);
+    padding: 10px;
+}
+
+footer ::placeholder {
+    font-size: medium;
+}
+
+.submit-button{
+    background-color: var(--color-red);
+    color: white;
+    padding: 2px 6px;
+}
+
+.social-medias{
+    text-align: center;
+    gap: 40px;
+}
+.social-medias .fa-brands{
+    font-size: 50px;
+}
+
+.payment-methods{
+    width: 300px;
+}
+
+.up{
+    gap: 5px;
+}
+/*================ MEDIA QUERIES ====================== */
+@media (max-width: 1000px) {
+/* ------- FOOTER  ------ */
+
+footer{
+    padding: 30px;
+}
+}
+
+@media (max-width: 750px) {
+
+        /* ---------FOOTER ------ */
+        .footer-one{
+            flex-direction: column;
+            align-items: center;
+        }
+}
+
+@media (max-width: 550px){
+    /* ------------ FOOTER ------------- */
+footer{
+    padding: 30px;
+}
+.social-medias .fa-brands{
+    font-size: 40px;
+}
+
+.payment-methods{
+    width: 250px;
+}
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
