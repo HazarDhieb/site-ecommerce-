@@ -1,0 +1,51 @@
+.articles{
+    border: 1px solid black;
+    width: 100%;
+    /* background-color: var(--color-extra_light_grey); */
+    align-items: flex-start;
+    gap: 15px;
+    padding: 10px 20px;
+
+}
+
+ h2{
+    font-size: clamp(16px,3vw,25px);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.article {
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 20px;
+
+}
+.detail {
+    align-items: flex-start;
+    gap: 10px;
+}
+.nom-prix{
+    width: 100%;
+    font-weight: 700;
+    justify-content: space-between;
+    /* gap: 20px; */
+}
+
+p{
+    font-size: 18px;
+}
+.elements {
+    gap: 40px;
+
+}
+
+.element {
+    justify-content: space-around;
+    gap: 10px;
+
+}
+
+hr{
+    width: 100%;
+    border-top: 1px solid grey;
+}

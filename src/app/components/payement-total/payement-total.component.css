@@ -1,0 +1,23 @@
+.total {
+    width: 100%;
+    border: 1px solid black;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 10px 20px 40px;
+
+}
+.total hr {
+    width: 50%;
+}
+
+.total-prix{
+    font-weight: bold;
+    
+}
+.total span {
+    gap: 10px;
+    font-size: 16px;
+}
+.total a{
+    margin-top: 20px;
+}

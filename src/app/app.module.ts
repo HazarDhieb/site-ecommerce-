@@ -29,6 +29,7 @@ import { PaymentSuccessComponent } from './pages/payment-success/payment-success
 import { NewsletterComponent } from './components/newsletter/newsletter.component';
 import { ReviewCardComponent } from './components/review-card/review-card.component';
 import { ProductDescriptionComponent } from './components/product-description/product-description.component';
+import { CardProductCartComponent } from './components/card-product-cart/card-product-cart.component';
 @NgModule({
   declarations: [
     CategoryCardComponent,
@@ -55,7 +56,8 @@ import { ProductDescriptionComponent } from './components/product-description/pr
     PaymentSuccessComponent,
     NewsletterComponent,
     ReviewCardComponent,
-    ProductDescriptionComponent
+    ProductDescriptionComponent,
+    CardProductCartComponent
   ],
   imports: [
     ReactiveFormsModule,
