@@ -30,6 +30,7 @@ p{
     margin-bottom: 30px;
 }
 .red{
+    color:white;
     background-color: var(--color-red);
 }
 .gray{
