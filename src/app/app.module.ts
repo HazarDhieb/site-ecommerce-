@@ -26,6 +26,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ButtonComponent } from './components/button/button.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { PaymentSuccessComponent } from './pages/payment-success/payment-success.component';
+import { NewsletterComponent } from './components/newsletter/newsletter.component';
+import { ReviewCardComponent } from './components/review-card/review-card.component';
+import { ProductDescriptionComponent } from './components/product-description/product-description.component';
 @NgModule({
   declarations: [
     CategoryCardComponent,
@@ -49,7 +52,10 @@ import { PaymentSuccessComponent } from './pages/payment-success/payment-success
     BarProgressComponent,
     ButtonComponent,
     ProductCardComponent,
-    PaymentSuccessComponent
+    PaymentSuccessComponent,
+    NewsletterComponent,
+    ReviewCardComponent,
+    ProductDescriptionComponent
   ],
   imports: [
     ReactiveFormsModule,

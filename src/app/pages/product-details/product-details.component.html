@@ -1,6 +1,18 @@
-<app-back-button></app-back-button>
-<div *ngIf="product">
-    <h3>{{product.name}}</h3>
-    <p>{{product.price}}€</p>
-    <p>{{product.description}}</p>
-</div>
+<section *ngIf="product" id="product" class="flex">
+        <div class="product-pictures flex">
+            <div class="sub-pictures flex column">
+                <img *ngIf="product.image2" src="{{product.image2}}" alt="{{product.name}}">
+                <img *ngIf="product.image3" src="{{product.image3}}" alt="{{product.name}}">
+            </div>
+            <img class="main-picture" src="{{product.image}}" alt="{{product.name}} 3">
+        </div>
+        <app-product-description *ngIf="product" [product]="product"></app-product-description>
+    </section>
+    <hr>
+    <section id="same-products" class="flex column">
+        <h3>Articles de la même région</h3>
+        <div class="same-products_main flex">
+            <app-product-card *ngFor="let sameProduct of fourSameProducts" [product]="sameProduct"></app-product-card>
+        </div>
+        <app-button [button]="buttonInfo"></app-button>
+    </section>

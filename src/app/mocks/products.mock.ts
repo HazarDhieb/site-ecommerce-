@@ -8,6 +8,8 @@ export interface Product {
     id: number;
     name: string;
     image: string;
+    image2?: string;
+    image3?: string;
     origin: string;
     colors: Color[];
     size: string;
@@ -22,14 +24,16 @@ export interface Product {
 export const PRODUCTS: Product [] = [
     {
         id: 1,
-        name: "Sari",
-        image: "assets/images/asian_products/sari-purple.png",
+        name: "Sari de cérémonie",
+        image: "assets/images/product_details/product_sari_1.png",
+        image2: "assets/images/product_details/product_sari_2.png",
+        image3: "assets/images/product_details/product_sari_3.png",
         origin: "Inde",
-        colors: [{colorName:"Rouge", colorCode:"#ff0000"},{colorName:"bleu", colorCode:"#0000ff"},{colorName:"jaune", colorCode:"#ffff00"}],
-        size: "3m",
+        colors: [{colorName:"purple", colorCode:"#3a0080"},{colorName:"red", colorCode:"#ff0000"},{colorName:"yellow", colorCode:"#ffa500"}],
+        size: "3m de longueur",
         price: 127.95,
-        description: "Sari indien bleu et rose",
-        entretien : "laver au pressing",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum qui optio eum, quaerat nisi enim ratione nesciunt voluptates accusamus.",
+        entretien : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum qui optio eum, quaerat nisi enim ratione nesciunt voluptates accusamus.",
         isAvailable: true,
         isVisible:true,
         categoryId: 3,

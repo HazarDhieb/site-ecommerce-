@@ -1,0 +1,19 @@
+<div class="product-details flex column">
+    <h2>{{product.name}}</h2>
+    <p>Origine : {{product.origin}}</p>
+    <p>Couleur :</p>
+    <div *ngIf="colors" class="colors flex">
+         <div *ngFor="let color of colors" [style.background-color]="color.colorCode" class="color"></div>
+    </div>
+    <p>Taille : {{product.size}}</p>
+    <p class="price">{{product.price}}€</p>
+    <div class="product-description">
+        <p>Description :</p>
+        <p>{{product.description}}</p>
+    </div>
+    <div class="product-entretien">
+        <p>Entretien :</p>
+        <p>{{product.entretien}}</p>
+    </div>
+    <app-button [button]="buttonInfo"></app-button>
+</div>
