@@ -1,14 +1,9 @@
-<article class="flex column">
-    <div class="total flex column">
-        <p>Sous-total HT :...... €</p>
-        <p>TVA : .....€</p>
-        <p>Sous-total TTC : ....€</p>
-        <p>Livraison : Gratuit</p>
-        <hr>
-        <p class="total-prix"><span>Total: ......</span> price</p>
-        <app-button></app-button>
-    </div>
-      
-</article>
-
-
+<div class="total flex column">
+    <p>Sous-total HT : {{this.cartService.totalPrice}}€</p>
+    <p>TVA : {{tva}}€</p>
+    <p>Sous-total TTC : {{total}}€</p>
+    <p *ngIf="url==='delivery'">Livraison : Gratuit</p>
+    <hr>
+    <p class="total-prix"><span>Total: </span> {{total}}€</p>
+    <!-- <app-button></app-button> -->
+</div>

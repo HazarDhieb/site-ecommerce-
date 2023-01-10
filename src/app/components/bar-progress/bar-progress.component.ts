@@ -18,7 +18,6 @@ export class BarProgressComponent {
   getUrl(){
     if( this.router.url.includes('cart'))
     {
-
       this.url='cart';
     }
     else if( this.router.url.includes('payment'))
@@ -31,10 +30,6 @@ export class BarProgressComponent {
 
       this.url='delivery';
     }
-
-
-    
-
   }
   
   // getColor() {
