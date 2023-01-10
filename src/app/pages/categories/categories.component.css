@@ -1,8 +1,17 @@
-#title{
+#categories{
     gap: 50px;
+}
+
+#categories h1{
+    font-size: clamp(25px,3vw,35px);
+}
+#categories p {
+    text-align: center;
 }
 #card{
     gap: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .title-category h1 {

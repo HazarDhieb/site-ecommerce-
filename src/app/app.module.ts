@@ -30,6 +30,7 @@ import { NewsletterComponent } from './components/newsletter/newsletter.componen
 import { ReviewCardComponent } from './components/review-card/review-card.component';
 import { ProductDescriptionComponent } from './components/product-description/product-description.component';
 import { CardProductCartComponent } from './components/card-product-cart/card-product-cart.component';
+import { DeliveryComponent } from './pages/delivery/delivery.component';
 @NgModule({
   declarations: [
     CategoryCardComponent,
@@ -57,7 +58,8 @@ import { CardProductCartComponent } from './components/card-product-cart/card-pr
     NewsletterComponent,
     ReviewCardComponent,
     ProductDescriptionComponent,
-    CardProductCartComponent
+    CardProductCartComponent,
+    DeliveryComponent
   ],
   imports: [
     ReactiveFormsModule,

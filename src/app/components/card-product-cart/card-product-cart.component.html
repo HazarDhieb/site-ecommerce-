@@ -1,24 +1,17 @@
-<section class="flex">
-    <div class="article-livraison flex column">
-        <div class="articles flex column">
-            <div class="article flex">
-                <a routerLink="/cart"><img src="" alt="photo de produit"></a>
-                <div class="detail flex column">
-                    <div class="nom-prix flex">
-                        <h3>nom de produit</h3>
-                        <p>prix€</p>
-                    </div>
-                    <p>description****</p>
-                    <div class=" elements flex">
-                        <div class=" element flex">
-                            <mat-icon>favorite_border</mat-icon>Ajouter au favoris
-                        </div>
-                        <div class="element flex">
-                            <mat-icon>delete</mat-icon>Retirer du panier
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div class="article flex">
+    <a routerLink="/products/{{cartProduct.product.id}}"><img src="{{cartProduct.product.image}}" alt="photo de produit"></a>
+    <div class="detail flex column">
+        <div class="nom-prix flex">
+            <h3>{{cartProduct.product.name}}</h3>
+            <p>{{cartProduct.product.price}}€</p>
+        </div>
+        <p>Quantité : {{cartProduct.quantity}} </p>
+        <p>Origine : {{cartProduct.product.origin}}</p>
+        <p>Taille : {{cartProduct.product.size}}</p>
+        <div class="elements flex">
+                <!-- <button><mat-icon>favorite_border</mat-icon>Ajouter aux favoris</button> -->
+                <button *ngIf="url==='cart'" type="button" (click)="removeProduct()"><mat-icon>delete</mat-icon>Retirer du panier</button>
         </div>
     </div>
-</section>
+</div>
+<hr>

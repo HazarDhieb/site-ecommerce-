@@ -1,13 +1,11 @@
-<section id="title" class="flex column " >
-    <h1>Catégories </h1>
-     <p>
-    De l’Asie à l’Amérique du sud en passant par l’afrique de l’est, découvrez nos produits classés par
-                région.
-    Tant de pays à découvrir, tant de traditions et savoir-faire, tant de richesse culturelle.
-     </p>
-  <div id="card" class="flex">  
-          <app-category-card *ngFor="let category of categories" [category]="category"></app-category-card>
+<section id="categories" class="flex column ">
+    <h1>Catégories</h1>
+    <p>
+        De l’Asie à l’Amérique du sud en passant par l’afrique de l’est, découvrez nos produits classés par
+        région.
+        Tant de pays à découvrir, tant de traditions et savoir-faire, tant de richesse culturelle.
+    </p>
+    <div id="card" class="flex">
+        <app-category-card *ngFor="let category of categories" [category]="category"></app-category-card>
     </div>
-    <app-garantees></app-garantees>
-    
 </section>

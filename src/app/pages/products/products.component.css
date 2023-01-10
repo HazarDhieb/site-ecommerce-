@@ -1,3 +1,69 @@
+/* EN-TETE */
+h1{
+    font-size: clamp(24px,3vw,38px);
+}
+.continent{
+    gap: 50px;
+}
+
+.pays{
+    gap: 50px
+}
+/* FILTERS */
+.filters{
+    justify-content: center;
+    margin-bottom: 40px;
+    gap: 50px;
+}
+
+.filters select, .filters input {
+    padding: 4px 3px;
+    /* border-color: black; */
+    outline: none;
+    width: 120px;
+}
+.filters option{
+    font-size: (12px, 3vw, 17px);
+}
+
+.filters::placeholder{
+    font-size: (12px, 3vw, 17px);
+    color: black;
+}
+
+.separator {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap; 
+    margin: 20px;
+}
+
+.separator > span {
+    position: relative;
+    display: inline-block;
+}
+
+.separator > span:before,
+.separator > span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 9999px;
+    height: 1px;
+    background: var(--color-dark_grey);
+}
+
+.separator > span:before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.separator > span:after {
+    left: 100%;
+    margin-left: 15px;
+}
+
 #products {
     flex-wrap: wrap;
     gap: 30px;

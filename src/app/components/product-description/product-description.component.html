@@ -15,5 +15,6 @@
         <p>Entretien :</p>
         <p>{{product.entretien}}</p>
     </div>
-    <app-button [button]="buttonInfo"></app-button>
+    <button id="toCart" (click)="addToCart()">Ajouter au panier</button>
+    <!-- <app-button [button]="buttonInfo" type="button" click="addToCart()"></app-button> -->
 </div>

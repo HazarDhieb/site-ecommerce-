@@ -1,10 +1,39 @@
-<!-- <app-back-button></app-back-button>
-<div *ngFor="let product of products">
-    <article>
-        <h3> {{item.name}} </h3>
-        <p> {{ item.price}} </p>
-        <a routerLink="/products/{{item.id}}">Voir le produit</a>
-    </article> -->
-    <section id="products" class="flex">  
-        <app-product-card *ngFor="let product of products" [product]="product"></app-product-card>
-    </section>
+<section class="continent flex column">
+    <h1>{{category.name}}</h1>
+    <div class="pays flex">
+        <a href="#">Corée</a>
+        <a href="#">Chine</a>
+        <a href="#">Inde</a>
+        <a href="#">Japon</a>
+        <a href="#">Mongolie</a>
+    </div>
+
+    <!-- FORM -->
+
+    <form action="#" class="filters flex">
+        <select name flex column="filters" id="filters">
+            <option value="">Trier par : </option>
+            <option value="">Prix ascendant</option>
+            <option value="">Prix descendant</option>
+        </select>
+        <select name flex column="size" id="size">
+            <option value="">Taille :</option>
+            <option value="">M</option>
+            <option value="">S</option>
+            <option value="">M</option>
+            <option value="">L</option>
+            <option value="">XL</option>
+        </select>
+        <input type="text" placeholder="Couleur :">
+    </form>
+</section>
+
+<!-- NOMBRE D'ARTICLES -->
+
+<div class="separator">
+    <span>13 articles</span>
+</div>
+
+<section id="products" class="flex">
+    <app-product-card *ngFor="let product of products" [product]="product"></app-product-card>
+</section>
