@@ -10,9 +10,9 @@
     </section>
     <hr>
     <section id="same-products" class="flex column">
-        <h3>Articles de la même région</h3>
+        <h3>Consultés récemment</h3>
         <div class="same-products_main flex">
-            <app-product-card *ngFor="let sameProduct of fourSameProducts" [product]="sameProduct"></app-product-card>
+            <app-product-card *ngFor="let lastProduct of lastSeenProducts" [product]="lastProduct"></app-product-card>
         </div>
         <app-button [button]="buttonInfo"></app-button>
     </section>

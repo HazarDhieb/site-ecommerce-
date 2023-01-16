@@ -31,6 +31,7 @@ import { ReviewCardComponent } from './components/review-card/review-card.compon
 import { ProductDescriptionComponent } from './components/product-description/product-description.component';
 import { CardProductCartComponent } from './components/card-product-cart/card-product-cart.component';
 import { DeliveryComponent } from './pages/delivery/delivery.component';
+import { DeliveryFormComponent } from './components/delivery-form/delivery-form.component';
 @NgModule({
   declarations: [
     CategoryCardComponent,
@@ -59,7 +60,8 @@ import { DeliveryComponent } from './pages/delivery/delivery.component';
     ReviewCardComponent,
     ProductDescriptionComponent,
     CardProductCartComponent,
-    DeliveryComponent
+    DeliveryComponent,
+    DeliveryFormComponent
   ],
   imports: [
     ReactiveFormsModule,
@@ -68,7 +70,7 @@ import { DeliveryComponent } from './pages/delivery/delivery.component';
     AppRoutingModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [CartComponent,PayementTotalComponent],
   bootstrap: [AppComponent],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
