@@ -29,7 +29,7 @@ export class PayementTotalComponent {
   }
 
   getChoice(){
-    console.log(this.choice);
+    // console.log(this.choice);
   }
   
   getTotal(choice: string){
@@ -43,7 +43,7 @@ export class PayementTotalComponent {
     }
     // console.log("hi");
     // console.log(this.router.url);
-    console.log(choice);
+    // console.log(choice);
   }
 
   getUrl(){
