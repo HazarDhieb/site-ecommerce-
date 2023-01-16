@@ -1,0 +1,26 @@
+<form class="livraison">
+    <h2>LIVRAISON</h2>
+    <p>Vous pourrez modifier votre choix à l’etape suivante.
+        Les dates affichées sont des estimations.</p>
+    <div class="flex">
+        <ul type="none" class="groupe1 flex">
+            <div>
+                <input type="radio" id="home_delivery" value="5,90€" name="choix-livraison" (change)="this.itemChange($event)">
+                <label for="home_delivery"> A Domicile</label>
+            </div>
+            <li>Livraison en 48h garantie</li>
+            <li><b>5.90€</b></li>
+        </ul>
+    </div>
+    <hr>
+    <div class=" flex">
+        <ul type="none" class=" groupe2 flex">
+            <div>
+                <input type="radio" id="relay_delivery" value="Gratuit" name="choix-livraison" (change)="this.itemChange($event)">
+                <label for="relay_delivery"> Point Relais</label>
+            </div>
+            <li>Livraison en 72h (jours ouvrés)</li>
+            <li><b>Gratuit</b></li>
+        </ul>
+    </div>
+</form> 

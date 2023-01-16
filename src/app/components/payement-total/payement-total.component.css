@@ -3,7 +3,7 @@
     border: 1px solid black;
     gap: 20px;
     align-items: flex-start;
-    padding: 10px 20px 40px;
+    padding: 20px 20px 40px;
 
 }
 .total hr {
@@ -16,8 +16,26 @@
 }
 .total span {
     gap: 10px;
-    font-size: 16px;
 }
 .total a{
     margin-top: 20px;
+}
+
+.total p {
+    font-size: clamp(15px, 3vw, 18px);
+}
+
+#toAction {
+    align-self: center;
+    background-color: var(--color-red);
+    color: var(--color-white);
+    padding: 10px 20px;
+    font-size: clamp(5px, 3vw, 15px);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+#toAction:hover {
+    background-color: var(--color-beige);
 }
