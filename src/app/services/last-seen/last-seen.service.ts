@@ -35,9 +35,13 @@ export class LastSeenService {
     this.saveSeenList(list);
   }
 
-  removeProductFromlist (id:number){
+  removeProductFromlist (listItem : Product){
     const list = this.getSeenList();
-    list.splice(id);
+    const foundProduct = list.find((product: Product)=> product.id === listItem.id );
+    if(foundProduct){
+      const index = list.indexOf(foundProduct);
+      list.splice(index,1);
+    }
     this.saveSeenList(list);
   }
 }

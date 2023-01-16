@@ -14,5 +14,5 @@
         <div class="same-products_main flex">
             <app-product-card *ngFor="let lastProduct of lastSeenProducts" [product]="lastProduct"></app-product-card>
         </div>
-        <app-button [button]="buttonInfo"></app-button>
+        <app-button [button]="buttonInfo" [product]="product!"></app-button>
     </section>

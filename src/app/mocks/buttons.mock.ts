@@ -11,7 +11,7 @@ export const BUTTON: Button[] = [
     },
     {
         buttonTitle: "Voir plus",
-        buttonLink:"/products"
+        buttonLink:"/categories/{{product.categoryId}}"
     },
     {
         buttonTitle: "Valider la commande",

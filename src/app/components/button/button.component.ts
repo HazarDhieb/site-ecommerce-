@@ -1,5 +1,6 @@
 import { Component,Input } from '@angular/core';
 import { Button } from 'src/app/mocks/buttons.mock';
+import { Product } from 'src/app/mocks/products.mock';
 
 @Component({
   selector: 'app-button',
@@ -9,5 +10,5 @@ import { Button } from 'src/app/mocks/buttons.mock';
 export class ButtonComponent {
 
 @Input() button!: Button;
-
+@Input() product!: Product;
 }

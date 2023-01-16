@@ -16,6 +16,7 @@ export class ProductDetailsComponent {
   sameProducts!:Product[] | undefined;
   fourSameProducts: Product[] = [];
   lastSeenProducts! : Product[];
+  index!: number;
 
   constructor(
     private productService: ProductsService,
@@ -34,7 +35,7 @@ export class ProductDetailsComponent {
     this.getFourSameCatProducts(this.getSameCategoryProducts())
     if(this.product){
       console.log("product",this.product);
-      this.lastSeenService.removeProductFromlist(this.product.id);
+      this.lastSeenService.removeProductFromlist(this.product);
       this.getLastSeen();
     }
     console.log(this.fourSameProducts);
