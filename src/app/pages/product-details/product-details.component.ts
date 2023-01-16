@@ -16,6 +16,7 @@ export class ProductDetailsComponent {
   sameProducts!:Product[] | undefined;
   fourSameProducts: Product[] = [];
   lastSeenProducts! : Product[];
+  fiveLastProducts: Product[] = [];
   index!: number;
 
   constructor(
@@ -24,24 +25,20 @@ export class ProductDetailsComponent {
     private lastSeenService: LastSeenService,
     private router: Router){} // activatedRoute pour récupéerer l'id
 
-   getLastSeen(){
-    this.lastSeenProducts = this.lastSeenService.getSeenList();
-   } 
-
-  ngOnInit(){
-    this.getProduct();
-    // this.getLastSeen();
-    this.getSameCategoryProducts();
-    this.getFourSameCatProducts(this.getSameCategoryProducts())
-    if(this.product){
+    
+    ngOnInit(){
+      this.getProduct();
+      // this.getLastSeen();
+      console.log(this.getFiveLastSeen(this.getLastSeen()));
+      if(this.product){
       console.log("product",this.product);
       this.lastSeenService.removeProductFromlist(this.product);
       this.getLastSeen();
     }
     console.log(this.fourSameProducts);
-
+    
   }
-
+  
   ngOnDestroy() {
     if(this.product){
       this.lastSeenService.addProductToList(this.product);
@@ -53,7 +50,18 @@ export class ProductDetailsComponent {
     const foundProduct = this.productService.getProductById(id);
     foundProduct ? this.product = foundProduct : this.router.navigate(['/not-found']);
   }
+  getLastSeen(){
+   this.lastSeenProducts = this.lastSeenService.getSeenList();
+   return this.lastSeenProducts;
+  } 
 
+  getFiveLastSeen(lastSeenProducts: Product[]){
+    for(let i=lastSeenProducts.length; i<4; i--){
+      this.fiveLastProducts.push(lastSeenProducts[i]);
+    }
+    return this.fiveLastProducts;
+  }
+  
   getSameCategoryProducts() : Product[] | undefined{
     if(this.product){
       this.sameProducts = this.productService.getProductsByCategoryId(this.product.categoryId);
@@ -67,4 +75,5 @@ export class ProductDetailsComponent {
     }
     return this.fourSameProducts;
   }
+
 }

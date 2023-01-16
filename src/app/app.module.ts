@@ -60,9 +60,7 @@ import { DeliveryFormComponent } from './components/delivery-form/delivery-form.
     ProductDescriptionComponent,
     CardProductCartComponent,
     DeliveryComponent,
-
-    PayementFormComponent
-
+    PayementFormComponent,
     DeliveryFormComponent
 
   ],

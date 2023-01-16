@@ -1,39 +1,56 @@
 .hasError{
     border-color:red;
 }
-form{
-    gap: 40px;
-    font-size: 15px;
-    align-items: flex-start;
-}
 label{
     gap: 30px;
 }
-.other-payments-p{
-    font-size: clamp(10px,3vw,15px);
-    font-weight: 700;
-    margin-bottom: 20px;
-    margin-top: 20px;
+.payment{
+    border: 1px solid black;
+    align-items: center;
+    width: min(740px, 100%);
+    padding: 10px 20px 40px;
+    min-height: 332px;
+    
 }
+
 .payment-choice button {
     width: 100px;
 }
 
+.cb-button{
+    justify-content: center;
+}
+.cb{
+    width: 65px;
+}
+
+/* ----- FORMULAIRE PAIEMENT --------- */
+.payment-form{
+    gap: 15px;
+    font-size: 13px;
+    font-weight: bold;
+    align-items: flex-start;
+}
+
+.card-number, .expiration, .cvv{
+    gap: 12px;
+}
+
+.expiration-date  {
+    gap: 5px;
+}
 .submit {
     gap: 20px;
     align-self: center;
     margin-top: 20px;
 }
-.submit button{
-    margin-left: 20px;
-    border: none;
+.submit-button{
     text-transform: uppercase;
-    padding: 6px 10px;
     background-color: var(--color-red);
     color: var(--color-white);
-    padding: 10px 20px;
-    font-size: clamp(5px, 3vw, 15px);
-    letter-spacing: 2px;
+    padding: 9px 15px;
+    font-size: clamp(5px, 3vw, 12px);
+    letter-spacing: 1px;
     text-transform: uppercase;
     font-weight: 500;
 }
@@ -43,3 +60,12 @@ label{
     color: black;
 }
 
+@media (max-width:645px){
+    .card-number, .expiration, .cvv{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .payment-form {
+        width: 90%;
+    }
+}

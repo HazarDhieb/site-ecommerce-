@@ -1,39 +1,30 @@
-<form [formGroup]="paymentForm">
-    <div> 
-        <div class="payment-choice flex">
-            <button><img src="assets/images/payment/Mastercard.png" alt="master card"></button>
-            <button><img src="assets/images/payment/Visa.png" alt="visa"></button>
-            <button class="cb-button flex"><img class="cb" src="assets/images/payment/carte_bleue 1.png" alt="carte bleue"></button>
+<div class="payment flex column">
+    <div class="payment-choice flex">
+        <button><img src="assets/images/payment/Mastercard.png" alt="master card"></button>
+        <button><img src="assets/images/payment/Visa.png" alt="visa"></button>
+        <button class="cb-button flex"><img class="cb" src="assets/images/payment/carte_bleue 1.png"
+                alt="carte bleue"></button>
+    </div>
+    <form [formGroup]="paymentForm" class="payment-form flex column">
+        <div>
+            <label for="card_username">Nom et prénom : </label>
+            <input type="text" id="card_username" formControlName="card_username" [class.hasError]="validationError.includes('card_username')">
         </div>
-    <label for="card_username">Nom et prènom :</label>
-    <br>
-    <input type="text" id="card_username" formControlName="card_username">
-     </div>
-     <div>
-    <label for="card_number">N° de carte bancaire :</label>
-    <br>
-    <input type="text" id="card_number" formControlName="card_number">
-    </div>
-    <div>
-    <label for="card_expiration">Date d'expiration :</label>
-    <br>
-    <input type="text" id="card_expiration" formControlName="card_expiration">
-    </div>
-    <div>
-    <label for="card_Cvv">Code de vérification :</label>
-    <br>
-    <input type="text" id="card_Cvv" formControlName="card_Cvv">
-    </div>
-    <div class="submit">
-       <button  type="submit" (click)="pay()"> Valider</button>
-       <button class="submit"  type="submit" (click)="delete()"> Annuler</button>
-    </div>
+        <div class="card-number flex">
+            <label for="card_number">N° de carte bancaire : </label>
+            <input type="text" id="card_number" formControlName="card_number" [class.hasError]="validationError.includes('card_number')">
+        </div>
+        <div class="expiration flex">
+            <label for="card_expiration">Date d'expiration : </label>
+            <input placeholder="MM/AA" type="text" id="card_expiration" formControlName="card_expiration" [class.hasError]="validationError.includes('card_expiration')">
+        </div>
+        <div class="cvv flex">
+            <label for="card_Cvv">Code de vérification : </label>
+            <input placeholder="XXX" type="text" id="card_cvv" formControlName="card_cvv" [class.hasError]="validationError.includes('card_cvv')">
+        </div>
+        <div class="submit flex">
+            <button class="submit-button" type="submit" (click)="pay()">Valider</button>
+            <button class="submit-button" type="submit" (click)="delete()">Annuler</button>
+        </div>
     </form>
-    <p class="other-payments-p">Vous pouvez également réaliser ce paiement avec :</p>
-            <div class="other-payments flex">
-                <img src="assets/images/payment/GooglePay.png" alt="google pay">
-                <img src="assets/images/payment/ApplePay.png" alt="apple pay">
-                <img src="assets/images/payment/PayPal.png" alt="paypal">
-                <img src="assets/images/payment/Bitcoin.png" alt="bitcoin">
-                <img src="assets/images/payment/AmazonPay.png" alt="amazon pay">
-            </div>
+</div>
