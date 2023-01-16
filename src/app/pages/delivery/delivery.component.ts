@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { CartProduct, CartService } from 'src/app/services/cart/cart.service';
 
 @Component({
@@ -8,11 +9,17 @@ import { CartProduct, CartService } from 'src/app/services/cart/cart.service';
 })
 export class DeliveryComponent {
   cart: CartProduct[] = [];
-  constructor(public cartService: CartService){
+  actionDescription: string = "Payer la commande"
+  deliveryChoice!: string;
+  constructor(public cartService: CartService,
+    private router: Router){
   }
 
   ngOnInit(){
     this.getCart();
+    if(this.cartService.productQuantity === 0){
+      this.router.navigate(['/cart']);
+    }
   }
 
   getCart(){
@@ -22,5 +29,14 @@ export class DeliveryComponent {
   removeProduct(index: number){
     this.cartService.removeProductFromCart(index);
     this.getCart();
+  }
+
+  validateDelivery = () => {
+    this.router.navigate(['/payment']);
+  }
+
+  getDeliveryChoice(choice:string){
+    this.deliveryChoice = choice;
+    // console.log(this.deliveryChoice);
   }
 }

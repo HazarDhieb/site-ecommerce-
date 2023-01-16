@@ -1,11 +1,6 @@
 <app-bar-progress></app-bar-progress>
 <!-- --------- continuer mes achats -------- -->
 
-<a href="./categories.html" class="continuer flex">
-    <i class="fa-solid fa-caret-left"></i>
-    <p>continuer mes achats</p>
-</a>
-
 <!-- NOMBRE D'ARTICLES -->
 <div class="separator">
     <span>{{this.cartService.productQuantity}} articles</span>
@@ -15,39 +10,15 @@
     <div class="article-livraison flex column">
         <div class="articles flex column">
             <h2>Mon panier</h2>
-            <app-card-product-cart *ngFor="let cartProduct of cart; let index=index" [index]="index" [cartProduct]="cartProduct"></app-card-product-cart>
-            <div class="livraison">
-                <h4>LIVRAISON</h4>
-                <p>Vous pourrez modifier votre choix à l’etape suivante.
-                    Les dates affichés sont des estimations.</p>
-                <div class="flex">
-                    <ul type="none" class=" groupe1 flex">
-                        <div>
-                            <input type="radio" id="domicile" name="choix-livraison" value="A Domicile">
-                            <label for="domicile">A Domicile</label>
-                        </div>
-                        <li>48h (Mardi le 22 novombre)</li>
-                        <li><b>5.90€</b></li>
-                    </ul>
-                </div>
-                <hr>
-                <div class=" flex">
-                    <ul type="none" class=" groupe2 flex">
-                        <div>
-                            <input type="radio" id="point-r" name="choix-livraison" value="point-relais">
-                            <label for="point-r">Point Relais</label>
-                        </div>
-                        <li>72h (Mercredi le 23 novembre)</li>
-                        <li><b>Gratuit</b></li>
-                    </ul>
-                </div>
-            </div>
+            <app-card-product-cart *ngFor="let cartProduct of cart; let index=index" [index]="index"
+                [cartProduct]="cartProduct"></app-card-product-cart>
         </div>
+        <app-delivery-form (onItemChange)="getDeliveryChoice($event)"></app-delivery-form>
     </div>
 
     <!-- --------------- total --------- -->
     <aside class="flex column">
-        <app-payement-total></app-payement-total>
+        <app-payement-total [actionTitle]="actionDescription" [cbFunction]=validateDelivery [choice]="deliveryChoice"></app-payement-total>
         <app-garantees></app-garantees>
     </aside>
 </section>

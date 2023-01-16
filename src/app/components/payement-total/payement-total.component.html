@@ -1,9 +1,10 @@
 <div class="total flex column">
-    <p>Sous-total HT : {{this.cartService.totalPrice}}€</p>
+    <p>Sous-total HT : {{this.cartService.totalPrice | number:'1.2'}}€</p>
     <p>TVA : {{tva}}€</p>
-    <p>Sous-total TTC : {{total}}€</p>
-    <p *ngIf="url==='delivery'">Livraison : Gratuit</p>
+    <p>Sous-total TTC : {{total | number:'1.2'}}€</p>
+    <p *ngIf="url==='delivery' && choice">Livraison : {{choice}}</p>
     <hr>
-    <p class="total-prix"><span>Total: </span> {{total}}€</p>
-    <!-- <app-button></app-button> -->
+    <p class="total-prix"><span>Total : </span> {{total | number:'1.2'}}€</p>
+    <!-- <p>{{action}}</p> -->
+    <button *ngIf="url!=='payment'" id="toAction" (click)="cbFunction()">{{actionTitle}}</button>
 </div>

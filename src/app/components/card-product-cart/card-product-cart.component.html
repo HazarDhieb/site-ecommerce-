@@ -3,7 +3,7 @@
     <div class="detail flex column">
         <div class="nom-prix flex">
             <h3>{{cartProduct.product.name}}</h3>
-            <p>{{cartProduct.product.price}}€</p>
+            <p>{{cartProduct.product.price | number:'1.2'}}€</p>
         </div>
         <p>Quantité : {{cartProduct.quantity}} </p>
         <p>Origine : {{cartProduct.product.origin}}</p>

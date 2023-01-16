@@ -5,6 +5,9 @@
     gap: 8px;
     margin-bottom: 10px;
 }
+.continuer > p {
+    margin: 0;
+}
 
 /* -------------- nombre d'articels ------------ */
 .separator {
@@ -49,16 +52,15 @@ h2{
     text-transform: uppercase;
 }
 #detail-commande{
-    gap: 20px;
+    gap: 30px;
     align-items: flex-start;
     justify-content: space-between;
 }
-/* ---------- section article et livraison ---------     */
 
-.article-livraison {
-    align-items: flex-start;
-    gap: 50px;
+#detail-commande .articles {
+    width: 65%;
 }
+
 /* ----------- Articles du panier ----------  */
 
 .articles{
@@ -71,43 +73,6 @@ h2{
 }
 app-card-product-cart {
     width: 100%;
-}
-/* --------------- livraison ------------ */
-.livraison {
-    border: 1px solid black;
-    padding: 10px 20px;
-
-
-    /* background-color: var(--color-beige); */
-
-}
-h4 {
-    padding-bottom: 30px;
-}
-
-.livraison p {
-    padding-bottom: 30px;
-}
-
-label {
-    font-weight: bold;
-}
-
-.groupe1 {
-    gap: 20px;
-    padding-bottom: 20px;
-}
-
-.groupe2 {
-    gap: 20px;
-    padding-top: 20px;
-    padding-bottom: 30px;
-}
-
-
-
-.livraison hr {
-    width: 50%;
 }
 
 /* ----------- ASIDE ------------- */
@@ -124,11 +89,17 @@ app-payement-total {
         flex-direction: column;
         gap: 15px;
     }
+    #detail-commande .articles {
+        width: 100%;
+    }
     .article-livraison{
         gap: 15px;
     }
     aside{
-        flex-direction: row;
+        flex-direction: column;
+        width: 100%;
+    }
+    aside >*{
         width: 100%;
     }
 }

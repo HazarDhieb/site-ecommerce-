@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Category } from 'src/app/mocks/categories.mock';
+import { Category, Country } from 'src/app/mocks/categories.mock';
 import { Product } from 'src/app/mocks/products.mock';
 import { CategoriesService } from 'src/app/services/categories/categories.service';
 import { ProductsService } from 'src/app/services/products/products.service';
@@ -13,6 +13,7 @@ import { ProductsService } from 'src/app/services/products/products.service';
 export class ProductsComponent {
   products: Product[] = [];
   category!: Category;
+  countries! : Country [];
 
   constructor(private productService: ProductsService,
     private categoryService: CategoriesService,
@@ -34,6 +35,13 @@ export class ProductsComponent {
     const id = Number(this.activatedRoute.snapshot.paramMap.get('id'));
     console.log("l'id de la page est:",id);
     const foundCategory = this.categoryService.getCategoryById(id);
-    foundCategory ? this.category = foundCategory : this.router.navigate(['/not-found']);
+    if(foundCategory){
+      this.category = foundCategory;
+      this.countries = this.category.countries;
+      console.log(this.countries)
+    }else {
+      this.router.navigate(['/not-found'])
+    }
+    // foundCategory ? this.category = foundCategory: this.router.navigate(['/not-found']);
   }
 }

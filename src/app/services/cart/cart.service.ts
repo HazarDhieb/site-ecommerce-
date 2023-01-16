@@ -52,6 +52,8 @@ export class CartService {
       cart.push(cartProduct);
     }
     this.saveCart(cart);
+    this.getTotalQuantity();
+    this.getTotalPrice();
     this.router.navigate(['/cart']);
   }
 
@@ -59,6 +61,8 @@ export class CartService {
     const cart = this.getCart();
     cart.splice(index,1);
     this.saveCart(cart);
+    this.getTotalQuantity();
+    this.getTotalPrice();
   }
 
   getTotalPrice() :void{
@@ -84,6 +88,8 @@ export class CartService {
     },0);
     this.productQuantity = total;
   }
+
+
 
   initCart(){
     this.getCart();

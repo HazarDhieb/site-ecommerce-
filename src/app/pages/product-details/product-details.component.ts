@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BUTTON } from 'src/app/mocks/buttons.mock';
 import { Product } from 'src/app/mocks/products.mock';
+import { LastSeenService } from 'src/app/services/last-seen/last-seen.service';
 import { ProductsService } from 'src/app/services/products/products.service';
 
 @Component({
@@ -14,20 +15,36 @@ export class ProductDetailsComponent {
   buttonInfo = BUTTON[1];
   sameProducts!:Product[] | undefined;
   fourSameProducts: Product[] = [];
+  lastSeenProducts! : Product[];
 
   constructor(
     private productService: ProductsService,
     private activatedRoute: ActivatedRoute,
+    private lastSeenService: LastSeenService,
     private router: Router){} // activatedRoute pour récupéerer l'id
+
+   getLastSeen(){
+    this.lastSeenProducts = this.lastSeenService.getSeenList();
+   } 
 
   ngOnInit(){
     this.getProduct();
+    // this.getLastSeen();
     this.getSameCategoryProducts();
     this.getFourSameCatProducts(this.getSameCategoryProducts())
     if(this.product){
       console.log("product",this.product);
+      this.lastSeenService.removeProductFromlist(this.product.id);
+      this.getLastSeen();
     }
     console.log(this.fourSameProducts);
+
+  }
+
+  ngOnDestroy() {
+    if(this.product){
+      this.lastSeenService.addProductToList(this.product);
+    }
   }
   // Fonction pour vérifier l'existence du produit, sinon 404;
   getProduct(){

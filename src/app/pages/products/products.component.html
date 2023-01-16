@@ -1,15 +1,10 @@
 <section class="continent flex column">
     <h1>{{category.name}}</h1>
     <div class="pays flex">
-        <a href="#">Corée</a>
-        <a href="#">Chine</a>
-        <a href="#">Inde</a>
-        <a href="#">Japon</a>
-        <a href="#">Mongolie</a>
+        <a href="#" *ngFor="let country of countries">{{country.countryName}}</a>
     </div>
 
     <!-- FORM -->
-
     <form action="#" class="filters flex">
         <select name flex column="filters" id="filters">
             <option value="">Trier par : </option>
