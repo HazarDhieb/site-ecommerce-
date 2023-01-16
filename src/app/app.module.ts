@@ -16,7 +16,6 @@ import { BackButtonComponent } from './components/back-button/back-button.compon
 import { ServiceCardComponent } from './components/service-card/service-card.component';
 import { ServicesComponent } from './components/services/services.component';
 import { CategoryCardComponent } from './components/category-card/category-card.component';
-import { PaymentsComponent } from './components/payments/payments.component';
 import { GaranteesComponent } from './components/garantees/garantees.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModuleTsModule } from './modules/angular-material.module.ts/angular-material.module.ts.module';
@@ -31,6 +30,7 @@ import { ReviewCardComponent } from './components/review-card/review-card.compon
 import { ProductDescriptionComponent } from './components/product-description/product-description.component';
 import { CardProductCartComponent } from './components/card-product-cart/card-product-cart.component';
 import { DeliveryComponent } from './pages/delivery/delivery.component';
+import { PayementFormComponent } from './components/payement-form/payement-form.component';
 import { DeliveryFormComponent } from './components/delivery-form/delivery-form.component';
 @NgModule({
   declarations: [
@@ -49,7 +49,6 @@ import { DeliveryFormComponent } from './components/delivery-form/delivery-form.
     BackButtonComponent,
     ServiceCardComponent,
     ServicesComponent,
-    PaymentsComponent,
     GaranteesComponent,
     PayementTotalComponent,
     BarProgressComponent,
@@ -61,7 +60,11 @@ import { DeliveryFormComponent } from './components/delivery-form/delivery-form.
     ProductDescriptionComponent,
     CardProductCartComponent,
     DeliveryComponent,
+
+    PayementFormComponent
+
     DeliveryFormComponent
+
   ],
   imports: [
     ReactiveFormsModule,
