@@ -18,7 +18,7 @@ export const BUTTON: Button[] = [
         buttonLink:"/payment"
     },
     {
-        buttonTitle: "Valider",
+        buttonTitle: "Payer",
         buttonLink:"/payment-success"
     },
     {

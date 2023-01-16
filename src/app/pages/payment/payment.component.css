@@ -1,0 +1,61 @@
+.achat {
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+.separator {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap; 
+    margin: 20px;
+}
+
+.separator > span {
+    position: relative;
+    display: inline-block;
+}
+
+.separator > span:before,
+.separator > span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 9999px;
+    height: 1px;
+    background: var(--color-dark_grey);
+}
+
+.separator > span:before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.separator > span:after {
+    left: 100%;
+    margin-left: 15px;
+}
+
+
+aside {
+    align-items: flex-start; 
+    gap: 20px; 
+}
+
+app-payement-total {
+    width: 100%;
+}
+@media (max-width:980px) {
+    #detail-commande {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .article-livraison{
+        gap: 15px;
+    }
+    aside{
+        flex-direction: row;
+        width: 100%;
+    }
+}
