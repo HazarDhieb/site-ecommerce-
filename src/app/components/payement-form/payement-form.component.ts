@@ -57,7 +57,8 @@ export class PayementFormComponent {
         } else {
             //créer une commande de la creation 
             //rediriger vers une page succés
-            localStorage.removeItem('cart');
+            // localStorage.removeItem('cart');
+            this.cartService.resetCart();
             this.router.navigate(['/payment-success']);
             // this.cartService.getCart();
 

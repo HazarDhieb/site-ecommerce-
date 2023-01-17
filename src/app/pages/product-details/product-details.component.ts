@@ -24,13 +24,18 @@ export class ProductDetailsComponent {
 
 
   ngOnInit() {
-    this.getProduct();
-    // this.getLastSeen();
-    if (this.product) {
-      console.log("product", this.product);
-      this.lastSeenService.removeProductFromlist(this.product);
-      this.getLastSeen();
-    }
+    this.activatedRoute.params.subscribe((next) => {
+      if (this.product) {
+        this.lastSeenService.addProductToList(this.product);
+      }
+
+      this.getProduct();
+      if (this.product) {
+        console.log("product", this.product);
+        this.lastSeenService.removeProductFromlist(this.product);
+        this.getLastSeen();
+      }
+    });
   }
 
   ngOnDestroy() {
@@ -38,6 +43,7 @@ export class ProductDetailsComponent {
       this.lastSeenService.addProductToList(this.product);
     }
   }
+  
   // Fonction pour vérifier l'existence du produit, sinon 404;
   getProduct() {
     const id = Number(this.activatedRoute.snapshot.paramMap.get('id'));

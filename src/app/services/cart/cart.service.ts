@@ -91,7 +91,11 @@ export class CartService {
     this.productQuantity = total;
   }
 
-
+  resetCart(){
+    this.createCart();
+    this.getTotalPrice();
+    this.getTotalQuantity();
+  } 
 
   initCart(){
     this.getCart();
