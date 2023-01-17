@@ -28,7 +28,6 @@ export class DeliveryFormComponent {
     this.deliveryChoice = value.target.defaultValue;
     this.onItemChange.emit(this.deliveryChoice);
     // this.payment.getTotal("Gratuit");
-    // console.log("hello");
-    // console.log(this.deliveryChoice);
+    this.payment.getTotal(this.deliveryChoice);
   }
 }

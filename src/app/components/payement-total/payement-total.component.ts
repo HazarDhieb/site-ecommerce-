@@ -17,6 +17,7 @@ export class PayementTotalComponent {
 
   tva: number = 0;
   total: number = 0;
+  subTotal: number = 0;
   url!: string;
   constructor(
     public cartService: CartService,
@@ -29,21 +30,20 @@ export class PayementTotalComponent {
   }
 
   getChoice(){
-    console.log(this.choice);
+    // console.log(this.choice);
   }
   
   getTotal(choice: string){
+    console.log("choix livraison",choice);
     const totalPrice = this.cartService.totalPrice;
     this.tva = +(0.2*totalPrice).toFixed(2);
-    if(choice!=="Gratuit"){
+    this.subTotal = +(totalPrice+this.tva).toFixed(2);
+    if(!choice || choice === "Gratuit"){
+      this.total = +(totalPrice+this.tva).toFixed(2);      
+    } else {
       this.total = +(totalPrice+this.tva+5.90).toFixed(2);
-    } else if(choice === "Gratuit") {
-      this.total = 
-      +(totalPrice+this.tva).toFixed(2);
     }
-    // console.log("hi");
-    // console.log(this.router.url);
-    console.log(choice);
+    console.log('total',this.total);
   }
 
   getUrl(){

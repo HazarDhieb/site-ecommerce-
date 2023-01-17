@@ -14,13 +14,13 @@ export const CATEGORIES: Category[] = [
         id: 1,
         name: "Afrique",
         image: "assets/images/categories/afrique.jpg",
-        countries: [{countryName: "Sénégal"},{countryName: "Egypte"},{countryName: "Bénin"},{countryName: "Maroc"},{countryName: "Congo"}]      
+        countries: [{countryName: "Tchad"},{countryName: "Nigeria"},{countryName: "Kenya"},{countryName: "Soudan"},{countryName: "Ethiopie"}]      
     },
     {
         id: 2,
         name: "Amérique du sud",
         image: "assets/images/categories/south amarica.jpg",
-        countries: [{countryName: "Mexique"},{countryName: "Colombie"},{countryName: "Panama"},{countryName: "Brésil"}]  
+        countries: [{countryName: "Mexique"},{countryName: "Guatemala"},{countryName: "Venezuela"},{countryName: "Colombie"},{countryName: "Pérou"}]  
     },
     {
         id: 3,
@@ -32,7 +32,7 @@ export const CATEGORIES: Category[] = [
         id: 4,
         name: "Europe",
         image: "assets/images/categories/Europe.jpg",
-        countries: [{countryName: "Irlande"},{countryName: "Écosse"},{countryName: "Allemagne"}]
+        countries: [{countryName: "Ukraine"},{countryName: "Bulgarie"},{countryName: "Albanie"},{countryName: "Roumanie"}]
         
     }
 ];

@@ -15,20 +15,23 @@ export class ProductsComponent {
   category!: Category;
   countries! : Country [];
 
+  productsNumber: number = 0;
+  
   constructor(private productService: ProductsService,
     private categoryService: CategoriesService,
     private activatedRoute: ActivatedRoute,
     private router: Router){}
-
-  ngOnInit() {
-    this.getProducts();
-    this.getCategory();
-    // console.log("THIS PRODUCTS"+this.products);
-  }
-  getProducts(){
-    const id = Number(this.activatedRoute.snapshot.paramMap.get('id'));
+    
+    ngOnInit() {
+      this.getProducts();
+      this.getCategory();
+      // console.log("THIS PRODUCTS"+this.products);
+    }
+    getProducts(){
+      const id = Number(this.activatedRoute.snapshot.paramMap.get('id'));
     const foundProducts = this.productService.getProductsByCategoryId(id);
     foundProducts ? this.products = foundProducts : this.router.navigate(['/not-found']);
+    this.productsNumber = this.products.length;
   }
 
   getCategory(){
@@ -42,6 +45,5 @@ export class ProductsComponent {
     }else {
       this.router.navigate(['/not-found'])
     }
-    // foundCategory ? this.category = foundCategory: this.router.navigate(['/not-found']);
   }
 }

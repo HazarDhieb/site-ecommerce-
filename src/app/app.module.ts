@@ -71,7 +71,7 @@ import { DeliveryFormComponent } from './components/delivery-form/delivery-form.
     AppRoutingModule,
     BrowserAnimationsModule
   ],
-  providers: [CartComponent,PayementTotalComponent],
+  providers: [CartComponent,PayementTotalComponent, DeliveryFormComponent],
   bootstrap: [AppComponent],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
