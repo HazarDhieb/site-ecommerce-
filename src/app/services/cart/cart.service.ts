@@ -78,6 +78,8 @@ export class CartService {
     },0);
     // On assigne la valeur du total à la propriété totalPrice
     this.totalPrice = total;
+    console.log('tata');
+
   }
 
   // Fonction pour récupérer la qté

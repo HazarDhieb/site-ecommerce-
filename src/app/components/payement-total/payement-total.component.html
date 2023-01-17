@@ -1,7 +1,7 @@
 <div class="total flex column">
     <p>Sous-total HT : {{this.cartService.totalPrice | number:'1.2'}}€</p>
     <p>TVA : {{tva}}€</p>
-    <p>Sous-total TTC : {{total | number:'1.2'}}€</p>
+    <p>Sous-total TTC : {{subTotal | number:'1.2'}}€</p>
     <p *ngIf="url==='delivery' && choice">Livraison : {{choice}}</p>
     <hr>
     <p class="total-prix"><span>Total : </span> {{total | number:'1.2'}}€</p>

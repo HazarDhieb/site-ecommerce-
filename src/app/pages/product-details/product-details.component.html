@@ -9,10 +9,10 @@
         <app-product-description *ngIf="product" [product]="product"></app-product-description>
     </section>
     <hr>
-    <section id="same-products" class="flex column">
+    <section *ngIf="lastSeenProducts" id="same-products" class="flex column">
         <h3>Consultés récemment</h3>
         <div class="same-products_main flex">
             <app-product-card *ngFor="let lastProduct of lastSeenProducts" [product]="lastProduct"></app-product-card>
         </div>
-        <app-button [button]="buttonInfo" [product]="product!"></app-button>
+        <!-- <app-button [button]="buttonInfo" [product]="product!"></app-button> -->
     </section>
