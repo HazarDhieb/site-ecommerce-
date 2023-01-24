@@ -11,14 +11,14 @@ export const BUTTON: Button[] = [
     },
     {
         buttonTitle: "Voir plus",
-        buttonLink:"/products"
+        buttonLink:"/categories/{{product.categoryId}}"
     },
     {
         buttonTitle: "Valider la commande",
         buttonLink:"/payment"
     },
     {
-        buttonTitle: "Valider",
+        buttonTitle: "Payer",
         buttonLink:"/payment-success"
     },
     {

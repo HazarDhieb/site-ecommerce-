@@ -1,0 +1,104 @@
+
+/* -------------- nombre d'articels ------------ */
+.separator {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap; 
+    margin: 20px;
+}
+
+.separator > span {
+    position: relative;
+    display: inline-block;
+}
+
+.separator > span:before,
+.separator > span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 9999px;
+    height: 1px;
+    background: var(--color-dark_grey);
+}
+
+.separator > span:before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.separator > span:after {
+    left: 100%;
+    margin-left: 15px;
+}
+
+
+
+/* ---------- section commande ---------- */
+h2{
+    font-size: clamp(16px,3vw,25px);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+#detail-commande{
+    gap: 30px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+/* ---------- section article et livraison ---------     */
+
+.article-livraison {
+    align-items: flex-start;
+    gap: 50px;
+    width: 65%;
+}
+/* ----------- Articles du panier ----------  */
+
+.articles{
+    border: 1px solid black;
+    width: 100%;
+    /* background-color: var(--color-extra_light_grey); */
+    align-items: flex-start;
+    gap: 15px;
+    padding: 10px 20px;
+}
+app-card-product-cart {
+    width: 100%;
+}
+
+/* ----------- Livraison ----------  */
+app-delivery-form {
+    width: 100%
+}
+
+
+/* ----------- ASIDE ------------- */
+aside {
+    align-items: flex-start; 
+    gap: 20px; 
+}
+
+app-payement-total {
+    width: 100%;
+}
+@media (max-width:980px) {
+    #detail-commande {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .article-livraison{
+        gap: 15px;
+        width: 100%;
+    }
+    .article-livraison >*{
+        width: 100%;
+    }
+    aside{
+        flex-direction: column;
+        width: 100%;
+    }
+    aside >*{
+        width: 100%;
+    }
+}

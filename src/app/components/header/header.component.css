@@ -66,6 +66,10 @@ nav a:hover {
     gap: 20px;
 }
 
+.fa-cart-shopping {
+    position: relative;
+}
+
 
 .hr-one, .hr-two {
     margin-top: 15px;
@@ -76,6 +80,25 @@ nav a:hover {
     height: 10px;
     border: 0;
     box-shadow: 0 10px 10px -10px #8c8c8c inset;
+}
+.step-circle {
+    width: 22px;
+    height: 22px;
+    border-radius: 100%;
+    font-weight: 200;
+    justify-content: center;
+    background: var(--color-red);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -13px;
+    right: -15px;
+    
+}
+.step-circle > p{
+    font-size: 10px;
+    margin: 0;
 }
 
 /* -------HEADER 2----------- */

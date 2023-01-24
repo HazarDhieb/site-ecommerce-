@@ -1,0 +1,17 @@
+<div class="article flex">
+    <a routerLink="/products/{{cartProduct.product.id}}"><img src="{{cartProduct.product.image}}" alt="photo de produit"></a>
+    <div class="detail flex column">
+        <div class="nom-prix flex">
+            <h3>{{cartProduct.product.name}}</h3>
+            <p>{{cartProduct.product.price | number:'1.2'}}€</p>
+        </div>
+        <p>Quantité : {{cartProduct.quantity}} </p>
+        <p>Origine : {{cartProduct.product.origin}}</p>
+        <p>Taille : {{cartProduct.product.size}}</p>
+        <div class="elements flex">
+                <!-- <button><mat-icon>favorite_border</mat-icon>Ajouter aux favoris</button> -->
+                <button *ngIf="url==='cart'" type="button" (click)="removeProduct()"><mat-icon>delete</mat-icon>Retirer du panier</button>
+        </div>
+    </div>
+</div>
+<hr>

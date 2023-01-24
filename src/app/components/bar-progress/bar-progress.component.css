@@ -30,8 +30,37 @@ p{
     margin-bottom: 30px;
 }
 .red{
+    color:white;
     background-color: var(--color-red);
 }
 .gray{
     background-color: var(--color-light_grey);
+}
+
+@media (max-width: 750px){
+    /* ------- progress bar ------- */
+    #progress-bar  {
+        margin: 0px 20px;
+    }
+    .step-circle {
+        width: 40px;
+        height: 40px;
+        font-size: 12px;
+    }
+    .step > p {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 550px){
+    /* ------- progress bar ------- */
+    #progress-bar  {
+        margin: 0px 30px;
+    }
+    .step-circle {
+        width: 30px;
+        height: 30px;
+        font-size: 10px;
+    }
+
 }

@@ -1,2 +1,25 @@
-
 <app-bar-progress></app-bar-progress>
+<!-- --------- continuer mes achats -------- -->
+
+<a routerLink="/categories" class="continuer flex">
+    <i class="fa-solid fa-caret-left"></i>
+    <p>continuer mes achats</p>
+</a>
+
+<!-- NOMBRE D'ARTICLES -->
+<div class="separator">
+    <span>{{this.cartService.productQuantity}} articles</span>
+</div>
+<section id="detail-commande" class="flex">
+    <!-- -------------- panier / livraison -------- -->
+    <div class="articles flex column">
+            <h2>Mon panier</h2>
+            <app-card-product-cart *ngFor="let cartProduct of cart; let index=index" [index]="index" [cartProduct]="cartProduct"></app-card-product-cart>
+    </div>
+
+    <!-- --------------- total --------- -->
+    <aside class="flex column">
+    <app-payement-total [actionTitle]="actionDescription" [cbFunction]="boundedValidateCart"></app-payement-total>
+        <app-garantees></app-garantees>
+    </aside>
+</section>

@@ -6,7 +6,6 @@ const materialModules=[
   MatIconModule
 ];
 
-
 @NgModule({
   declarations: [],
   imports: [

@@ -1,0 +1,58 @@
+/* --------- MAIN BOX -------- */
+.main-box{
+    border: 1px solid black;
+    padding: 20px 40px;
+}
+/* --------formulaire et total------ */
+
+.payment-total{
+    justify-content: unset;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.payment-total >*{
+    height: 100%;
+}
+
+app-payement-form{
+    width: min(65%,100%);
+}
+app-payement-total{
+    width: min(35%,100%);
+}
+
+/* ----------- autres options de paiement ---------- */
+.other-payments-p{
+    font-size: clamp(10px,3vw,15px);
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.other-payments {
+    justify-content: center;
+    gap: 20px;
+}
+.other-payments img{
+    width: 100px;
+}
+/* ------- MEDIA QUERIES ----------- */
+@media (max-width:805px){
+    .payment-total{
+        flex-direction: column;
+        gap: 20px;
+    }
+    app-payement-form{
+        width: 100%;
+    }
+    app-payement-total{
+        width: 100%;
+    }
+}
+
+@media(max-width: 545px){
+    .main-box {
+        padding: 10px
+    }
+}

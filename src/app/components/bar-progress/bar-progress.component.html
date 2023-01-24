@@ -1,22 +1,22 @@
 <section id="progress-bar" class="flex">
-    <div class="step flex column">
+    <a routerLink="/cart" class="step flex column">
         <div [class.gray]="url!=='cart'" class=" step-circle step-1 flex" [class.red]="url=='cart'" >
             <p>1</p>
         </div>
         <p>Panier</p>
-    </div>
+    </a>
     <span></span>
-    <div class="step flex column">
+    <a routerLink="/delivery" class="step flex column">
         <div [class.gray]="url!=='delivery'" class="  step-circle step-2 flex" [class.red]="url=='delivery'" >
             <p>2</p>
         </div>
         <p>Livraison</p>
-    </div>
+    </a>
     <span></span>
-    <div class="step flex column"> 
+    <a routerLink="/payment" class="step flex column"> 
         <div [class.gray]="url!=='payment'" class=" step-circle step-3 flex" [class.red]="url=='payment'" >
             <p>3</p>
         </div>
         <p>Paiement</p>
-    </div>
+    </a>
 </section>

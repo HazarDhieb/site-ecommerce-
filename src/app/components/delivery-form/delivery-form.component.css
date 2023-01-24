@@ -1,0 +1,38 @@
+/* --------------- livraison ------------ */
+.livraison {
+    border: 1px solid black;
+    padding: 10px 20px;
+
+
+    /* background-color: var(--color-beige); */
+
+}
+h2 {
+    font-size: clamp(16px,3vw,25px);
+    font-weight: 400;
+    text-transform: uppercase;}
+
+.livraison p {
+    padding-bottom: 30px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.groupe1 {
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.groupe2 {
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+
+
+.livraison hr {
+    width: 50%;
+}

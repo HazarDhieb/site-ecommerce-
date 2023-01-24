@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CartService } from './services/cart/cart.service';
+import { LastSeenService } from './services/last-seen/last-seen.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'etnika';
+  title = 'Etnika';
+  constructor(
+    private cartService: CartService,
+    private lastSeenService: LastSeenService
+  ){}
+  
+  ngOnInit(){
+    this.cartService.initCart();
+    this.lastSeenService.getSeenList();
+  }
 }

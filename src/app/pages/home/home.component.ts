@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Review, REVIEWS } from 'src/app/mocks/reviews.mock';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-
+  reviews: Review[] = REVIEWS;
 }

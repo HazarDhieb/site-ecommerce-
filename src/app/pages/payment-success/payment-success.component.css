@@ -1,0 +1,7 @@
+section{
+    gap: 20px;
+}
+p{
+    font-size: clamp(18px,3vw,25px);
+    text-align: center;
+}

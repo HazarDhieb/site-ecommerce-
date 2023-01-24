@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./payment.component.css']
 })
 export class PaymentComponent {
+ 
 
 }

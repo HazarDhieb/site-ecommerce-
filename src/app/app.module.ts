@@ -16,7 +16,6 @@ import { BackButtonComponent } from './components/back-button/back-button.compon
 import { ServiceCardComponent } from './components/service-card/service-card.component';
 import { ServicesComponent } from './components/services/services.component';
 import { CategoryCardComponent } from './components/category-card/category-card.component';
-import { PaymentsComponent } from './components/payments/payments.component';
 import { GaranteesComponent } from './components/garantees/garantees.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModuleTsModule } from './modules/angular-material.module.ts/angular-material.module.ts.module';
@@ -26,6 +25,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ButtonComponent } from './components/button/button.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { PaymentSuccessComponent } from './pages/payment-success/payment-success.component';
+import { NewsletterComponent } from './components/newsletter/newsletter.component';
+import { ReviewCardComponent } from './components/review-card/review-card.component';
+import { ProductDescriptionComponent } from './components/product-description/product-description.component';
+import { CardProductCartComponent } from './components/card-product-cart/card-product-cart.component';
+import { DeliveryComponent } from './pages/delivery/delivery.component';
+import { PayementFormComponent } from './components/payement-form/payement-form.component';
+import { DeliveryFormComponent } from './components/delivery-form/delivery-form.component';
 @NgModule({
   declarations: [
     CategoryCardComponent,
@@ -43,13 +49,20 @@ import { PaymentSuccessComponent } from './pages/payment-success/payment-success
     BackButtonComponent,
     ServiceCardComponent,
     ServicesComponent,
-    PaymentsComponent,
     GaranteesComponent,
     PayementTotalComponent,
     BarProgressComponent,
     ButtonComponent,
     ProductCardComponent,
-    PaymentSuccessComponent
+    PaymentSuccessComponent,
+    NewsletterComponent,
+    ReviewCardComponent,
+    ProductDescriptionComponent,
+    CardProductCartComponent,
+    DeliveryComponent,
+    PayementFormComponent,
+    DeliveryFormComponent
+
   ],
   imports: [
     ReactiveFormsModule,
@@ -58,7 +71,7 @@ import { PaymentSuccessComponent } from './pages/payment-success/payment-success
     AppRoutingModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [CartComponent,PayementTotalComponent, DeliveryFormComponent],
   bootstrap: [AppComponent],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
